@@ -1,4 +1,14 @@
 /* Specificity Exercise */
+/*
+the specificity for each rule is:
+
+nav .list-item > a: (0, 1, 1, 0)
+#main::first-letter: (0, 1, 0, 1)
+input[type]: (0, 0, 1, 1)
+section .main::first-line: (0, 0, 1, 2)
+nav ul.menu li#first a:not([class='visited']): (0, 1, 2, 3)
+div ol li ul li ol li ul li a: (0, 0, 7, 0)
+*/
 
 nav .list-item > a {
   color: var(--purple);
@@ -16,7 +26,7 @@ section .main::first-line {
   color: var(--purple);
 }
 
-nav ul.menu li#first a:not([class='visited']) {
+nav ul.menu li#first a:not([class="visited"]) {
   color: var(--purple);
 }
 
